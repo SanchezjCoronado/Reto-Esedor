@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
+import {FormControl} from '@angular/forms';
 
 export interface PeriodicElement {
   name: string;
@@ -32,8 +33,14 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class HomeComponent implements OnInit {
 
+  checked = false;
+  indeterminate = false;
+
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
+
+  date = new FormControl(new Date());
+  serializedDate = new FormControl((new Date()).toISOString());
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;

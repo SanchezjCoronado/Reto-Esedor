@@ -14,7 +14,10 @@ import { NavComponent } from './nav/nav.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
 
 
 @NgModule({
@@ -35,7 +38,11 @@ import {FormsModule} from '@angular/forms';
     MatCardModule,
     MatTableModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatCheckboxModule,
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

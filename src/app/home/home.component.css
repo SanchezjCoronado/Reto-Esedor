@@ -6,6 +6,15 @@ table {
   width: 200px;
 }
 
+section {
+  display: table;
+}
+
 .button {
   float: right;
+}
+
+mat-form-field {
+  margin-right: 12px;
+  width: 120px;
 }
